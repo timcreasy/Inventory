@@ -24,7 +24,7 @@
   </script>
   <script src="js/main.js"></script>
   <script src="controllers/inventoryListCtrl.js"></script>
-  <script src="controllers/printLabelsCtrl.js"></script>
+  <script src="controllers/withBarcode.js"></script>
 </head>
 
 <body ng-app="inventoryApp">
@@ -36,8 +36,12 @@
     </a>
 
     <form class="navbar-form navbar-right" role="input">
-      <button type="button" id="newProductButton" class="btn btn-default">New Product</button>
-      <button type="button" id="reprintLabelsButton" class="btn btn-default">Reprint Labels</button>
+      <a href="#/">
+        <button type="button" id="viewInventoryButton" class="btn btn-default">View Inventory</button>
+      </a>
+      <a href="#/printLabels"
+        <button type="button" id="printLabelsButton" class="btn btn-default">Print Labels</button>
+      </a>
     </form>
   </div>
 </nav>
@@ -46,7 +50,9 @@
 <a href="#/">View Inventory</a>
 <a href="#printLabels">Print Labels</a>
 
-<div ng-view></div>
+<div id="contentContainer">
+  <div ng-view></div>
+</div>
   
 </body>
 

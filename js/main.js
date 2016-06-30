@@ -16,7 +16,7 @@ inventoryApp.config(['$routeProvider',
 ]);
 
 
-// inventoryApp.factory('inventoryData', ['$firebase', function ($firebase) {
+// inventoryApp.factory('inventoryData', ['$firebase', '$firebaseArray'] {
 
 //       var ref = firebase.database().ref().child('inventory/');
 

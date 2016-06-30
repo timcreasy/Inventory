@@ -1,5 +1,9 @@
-<div>
-  <ul ng-repeat="product in inventory">
-    <li>{{product.productName}} - Quantity: {{product.quantity}} - Barcode: {{product.barcode}}</li>
-  </ul>
+<div class="col-xs-4 col-xs-offset-4">
+  <input type="text" id="inventorySearch" placeholder="Search inventory" ng-model="queryInventory" class="form-control">
+</div>
+
+<div class="productCard" ng-repeat="product in inventory | filter: queryInventory" id="{{$id}}">
+    <p class="productName">Product Name: {{product.productName}}</p>
+    <p class="productUnits">Number of units: {{product.quantity}}</p>
+    <p class="productBarcode">Product barcode: {{product.barcode}}</p>
 </div>
