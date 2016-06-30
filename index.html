@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-route/angular-route.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAKYt0h05-NPr5hn125q2U6t3HHB9iIm3g",
+      authDomain: "inventorycontrol.firebaseapp.com",
+      databaseURL: "https://inventorycontrol.firebaseio.com",
+      storageBucket: "firebase-inventorycontrol.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/main.js"></script>
+  <script src="controllers/inventoryListCtrl.js"></script>
+  <script src="controllers/printLabelsCtrl.js"></script>
+</head>
+
+<body ng-app="inventoryApp">
+
+<a href="#/">View Inventory</a>
+<a href="#printLabels">Print Labels</a>
+
+<div ng-view></div>
+  
+</body>
+
+</html>
