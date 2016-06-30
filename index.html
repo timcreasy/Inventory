@@ -10,6 +10,8 @@
   <script src="node_modules/angular-route/angular-route.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -26,6 +28,20 @@
 </head>
 
 <body ng-app="inventoryApp">
+<!-- NAVBAR -->
+<nav class="navbar navbar-default navbar-fixed-top navbarCustom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <span class="logo">Inventory Dashboard</span>
+    </a>
+
+    <form class="navbar-form navbar-right" role="input">
+      <button type="button" id="newProductButton" class="btn btn-default">New Product</button>
+      <button type="button" id="reprintLabelsButton" class="btn btn-default">Reprint Labels</button>
+    </form>
+  </div>
+</nav>
+<!-- END NAVBAR -->
 
 <a href="#/">View Inventory</a>
 <a href="#printLabels">Print Labels</a>
