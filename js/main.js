@@ -14,15 +14,3 @@ inventoryApp.config(['$routeProvider',
       });
   }
 ]);
-
-
-// inventoryApp.factory('inventoryData', ['$firebase', '$firebaseArray'] {
-
-//       var ref = firebase.database().ref().child('inventory/');
-
-//       return {
-//         all: function() {
-//           return $firebase(ref).$asArray();
-//         }
-//       }
-// }]);

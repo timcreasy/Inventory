@@ -3,9 +3,7 @@
 var ioBarcode = require('io-barcode');
 
 inventoryApp.controller('printLabelsCtrl', function($scope) {
-  $scope.greet = "Hey from printLabelsCtrl";
 
-  console.log("ioBarcode", ioBarcode);
  var canvas = ioBarcode.CODE128B("Hey Mathew", {
       width:  2,
       height: 100,
@@ -20,11 +18,9 @@ inventoryApp.controller('printLabelsCtrl', function($scope) {
       customLabel:null, // Will be displayed if displayValue is set to true 
   });
   $scope.canvas = canvas;
-  console.log("$scope.canvas", $scope.canvas);
 
   var img = new Image();
   img.src = canvas.toDataURL('image/png');
-  $("#heyo").append(img);
+  $("#barcode").append(img);
 
-  //console.log(barcode);
 });
